@@ -1,14 +1,23 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='webzip',
-    packages=['webzip'],
-    version='version number',  # Ideally should be same as your GitHub release tag varsion
+    version='1.0',
     description='Install python packages from any source on the web',
     author='Maximilian Lange',
     author_email='maxhlange@gmail.com',
-    url='github package source url',
-    download_url='download link you saved',
-    keywords=['tag1', 'tag2'],
-    classifiers=[],
+    packages=find_packages(),
+    include_package_data=True,
+    classifiers=[
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
+    ],
+    install_requires=[
+        'Click',
+    ],
+    entry_points={
+        'console_scripts': [
+            'webzip = webzip.installer:action',
+        ],
+    },
 )
