@@ -16,3 +16,8 @@ Example::
 
     webzip install https://myurl.com/files/package.zip
 
+
+Full Documentation
+===================
+
+https://centillionware.com/python/webzip
